@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/CalcoDev/SFML-Boilerplate">
-    <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
+    <img src=".github/images/logo.png" alt="Logo" width="192" height="48">
   </a>
 
   <h3 align="center">SFML Boilerplate</h3>
@@ -19,7 +19,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][.github/images/product_screenshot.png]](https://github.com/CalcoDev/SFML-Boilerplate)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/CalcoDev/SFML-Boilerplate)
 
 **!!! CURRENTLY THE PROJECT LINKS SFML AND SFML IMGUI-SFML STATICALLY & USING ABSOLUTE PATHS. WILL BE FIXED IN NEXT VERSION !!** </br>
 
@@ -43,3 +43,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Calcopod - [@Calcopod](https://twitter.com/Calcopod2)
+
+[product-screenshot]: GithubImages/ProductScreenshot.PNG
