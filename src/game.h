@@ -28,4 +28,7 @@ private:
     sf::Font smooth_font;
 
     sf::Clock deltaClock;
+
+    float my_color[4];
+    bool my_tool_active;
 };

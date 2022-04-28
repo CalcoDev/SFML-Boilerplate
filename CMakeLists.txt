@@ -14,17 +14,30 @@ configure_file(${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_SOURCE_DIR}/config.h)
 add_executable(SFML-Starter 
     ${CMAKE_SOURCE_DIR}/src/main.cpp
     ${CMAKE_SOURCE_DIR}/src/game.cpp
-    ${CMAKE_SOURCE_DIR}/src/utils.cpp
 )
 target_include_directories(SFML-Starter PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
-# I am aware doing statically linking and using set_dir() is very bad, especially for shared templates. 
-# Will probbaly be fixed in the next version.
-set(SFML_STATIC_LIBRARIES TRUE)
-set(SFML_DIR "C:/Program Files (x86)/SFML/lib/cmake/SFML")
-find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
+add_subdirectory(${CMAKE_SOURCE_DIR}/libs/sfml)
 
-set(ImGui-SFML_DIR "C:/Program Files (x86)/imgui_sfml/lib/cmake/ImGui-SFML")
-find_package(ImGui-SFML REQUIRED)
+set(BUILD_SHARED_LIBS FALSE)
+set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/libs/imgui)
+set(IMGUI_SFML_FIND_SFML OFF)
+set(IMGUI_SFML_IMGUI_DEMO ON)
 
-target_link_libraries(SFML-Starter PRIVATE sfml-graphics sfml-audio ImGui-SFML::ImGui-SFML)
+add_subdirectory(${CMAKE_SOURCE_DIR}/libs/imgui-sfml)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/libs/fmt)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/libs/effolkronium-random)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/libs/entt)
+
+target_include_directories(SFML-Starter PRIVATE ${CMAKE_SOURCE_DIR}/libs/imgui-entt-entity-editor)
+
+target_link_libraries(SFML-Starter PRIVATE 
+    sfml-graphics sfml-audio 
+    ImGui-SFML::ImGui-SFML 
+    effolkronium_random
+    EnTT::EnTT
+    fmt::fmt 
+)
