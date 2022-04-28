@@ -3,16 +3,11 @@
 #include "SFML/Graphics.hpp"
 
 namespace Utils {
-// Random number generation
-std::random_device dev;
-std::mt19937 rng(dev());
-std::uniform_int_distribution<std::mt19937::result_type> random(0, 1000);
-
-// Font
+namespace Drawing {
 void drawText(const float &x, const float &y, const int &size, const std::string &txt, sf::Font &font,
               const sf::Color &color, const bool &centered, sf::RenderWindow &window) {
     sf::Text text(txt, font, size);
-    text.setPosition(x, y);
+    text.setPosition(sf::Vector2f(x, y));
 
     if (centered)
         text.setOrigin(sf::Vector2f(text.getLocalBounds().left + (text.getLocalBounds().width / 2),
@@ -21,6 +16,7 @@ void drawText(const float &x, const float &y, const int &size, const std::string
 
     window.draw(text);
 }
+}  // namespace Drawing
 
 template <typename T>
 sf::Vector2<T> mapSurfaceCoords(const sf::Vector2<T> &map_from, const sf::Vector2<T> &map_to, const sf::Vector2<T> coords) {

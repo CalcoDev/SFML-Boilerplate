@@ -1,0 +1,21 @@
+[submodule "dep/sfml"]
+	path = dep/sfml
+	url = https://github.com/SFML/SFML.git
+[submodule "libs/sfml"]
+	path = libs/sfml
+	url = https://github.com/SFML/SFML.git
+[submodule "libs/imgui-sfml"]
+	path = libs/imgui-sfml
+	url = https://github.com/eliasdaler/imgui-sfml.git
+[submodule "libs/imgui"]
+	path = libs/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "libs/fmt"]
+	path = libs/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "libs/effolkronium-random"]
+	path = libs/effolkronium-random
+	url = https://github.com/effolkronium/random.git
+[submodule "libs/entt"]
+	path = libs/entt
+	url = https://github.com/skypjack/entt.git
