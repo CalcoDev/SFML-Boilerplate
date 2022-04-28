@@ -21,8 +21,6 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/CalcoDev/SFML-Boilerplate)
 
-**!!! CURRENTLY THE PROJECT LINKS SFML AND SFML IMGUI-SFML STATICALLY & USING ABSOLUTE PATHS. WILL BE FIXED IN NEXT VERSION !!** </br>
-
 An SFML Boilerplate to use for my future projects.
 I made this with the previous projects and code I kept rewritting, in order to simplify the making of games / applications.
 
@@ -33,6 +31,18 @@ I made this with the previous projects and code I kept rewritting, in order to s
 - [CMake](https://cmake.org/)
 - [Dear ImGui](https://github.com/ocornut/imgui)
 - [ImGui SFML](https://github.com/eliasdaler/imgui-sfml)
+- [{fmt}](https://github.com/fmtlib/fmt/)
+- [EnTT](https://github.com/skypjack/entt/)
+- [Effolkronium Random](https://github.com/effolkronium/random/)
+- [ImGUI EnTT Editor](https://github.com/Green-Sky/imgui_entt_entity_editor)
+
+## How to use
+In Git 2.13 and later:
+
+```
+git clone --recurse-submodules -j8 https://github.com/CalcoDev/SFML-Boilerplate.git sample-project
+cd sample-project
+```
 
 ## License
 
